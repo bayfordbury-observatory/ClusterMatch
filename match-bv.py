@@ -92,7 +92,7 @@ for Vline in VLines:
 print(str(matches) + " matches found")
 
 print("---------------------")
-print("Writing to file")	
+print("Writing to file: " +outFile)	
 
 f= open(outFile,"a")	
 
