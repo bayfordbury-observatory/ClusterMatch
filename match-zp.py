@@ -13,7 +13,7 @@ instMags=  sys.argv[1:][1] #"NGC457-B-inst-mags.csv"
 print("Instrument magnitudes: "+instMags)
 
 outfile=  sys.argv[1:][2] #"NGC457-B-cal-mags.csv"
-print("Ouput file for matches: "+outfile)
+print("Output file for matches: "+outfile)
 
 if os.path.exists(outfile):
 	print("Output file already exists")
