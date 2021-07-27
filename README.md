@@ -1,5 +1,7 @@
 # Cluster Match
 
+(Pre-requisites: Astropy, Numpy, Matplotlib)
+
 
 **Step 1:**
 
