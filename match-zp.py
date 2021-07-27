@@ -3,7 +3,6 @@ import math
 import statistics
 import sys
 
-print(sys.argv[1:])
 
 #read the filenames from the arguments
 catMags = sys.argv[1:][0] #"ngc 457_V_15s_B2_T3_72941-UCAC4.tbl"
@@ -51,72 +50,74 @@ matches = 0
 #Loop through all lines in the file
 for line in instLines:
 
+	
 	if lineNum >1:
 
 		parts = line.split(",")
 		
-		#Extract useful values from the source list
-		ra = float(parts[3]) 	#Right ascensions (degrees)
-		dec = float(parts[4]) 	#Declination (degrees)
-		mag = float(parts[14])			#Source instrument magnitude
-		
-		#print(str(lineNum )+" "+str(ra)+" "+str(dec)+" "+str(mag))
-		
-		firstLine = 0
-		
-		closest = 360
-		
-		
-
-		for lineCat in catLines:
-		
-		
-			#print(lineCat)
-			if firstLine>0:
+		if parts[0]!="End":
 			
-				#if line not empty
-				if lineCat.strip():
-					partsCat = lineCat.split("|")
-
-					raCat = float(partsCat[0]) 	#Right ascensions (degrees)
-					decCat = float(partsCat[1]) 	#Declination (degrees)
-					Vmag= float(partsCat[2])			#Source instrument magnitude
-					Bmag= float(partsCat[3].strip())			#Source instrument magnitude
-					
-					ra1 = math.radians(raCat)
-					ra2 = math.radians(ra)
-					d1 = math.radians(decCat)
-					d2 = math.radians(dec)			
-					
-					#Calculate the distance from this source to the target
-					angSep = 3600*math.degrees(math.acos(math.sin(d1)*math.sin(d2)+math.cos(d1)*math.cos(d2)*math.cos(ra1-ra2)))
-					
-					if angSep < maxDist and angSep<closest:
-							
-						closest = angSep
-						
-						if filt=="V":
-							catmag = Vmag
-						else:
-							catmag = Bmag
-						
-
-					
+			#Extract useful values from the source list
+			ra = float(parts[3]) 	#Right ascensions (degrees)
+			dec = float(parts[4]) 	#Declination (degrees)
+			mag = float(parts[14])			#Source instrument magnitude
 			
-			elif lineCat[:4] == "----":
-				firstLine = 1
+			#print(str(lineNum )+" "+str(ra)+" "+str(dec)+" "+str(mag))
+			
+			firstLine = 0
+			
+			closest = 360
+			
+
+			for lineCat in catLines:
+			
+			
 				#print(lineCat)
-			#else:
-				#print(lineCat)
+				if firstLine>0:
 				
-		
-		if closest<maxDist:
-		
-			zp = catmag-mag
-			zplist.append(zp)
-			matches = matches+1
+					#if line not empty
+					if lineCat.strip():
+						partsCat = lineCat.split("|")
+
+						raCat = float(partsCat[0]) 	#Right ascensions (degrees)
+						decCat = float(partsCat[1]) 	#Declination (degrees)
+						Vmag= float(partsCat[2])			#Source instrument magnitude
+						Bmag= float(partsCat[3].strip())			#Source instrument magnitude
+						
+						ra1 = math.radians(raCat)
+						ra2 = math.radians(ra)
+						d1 = math.radians(decCat)
+						d2 = math.radians(dec)			
+						
+						#Calculate the distance from this source to the target
+						angSep = 3600*math.degrees(math.acos(math.sin(d1)*math.sin(d2)+math.cos(d1)*math.cos(d2)*math.cos(ra1-ra2)))
+						
+						if angSep < maxDist and angSep<closest:
+								
+							closest = angSep
+							
+							if filt=="V":
+								catmag = Vmag
+							else:
+								catmag = Bmag
+							
+
+						
+				
+				elif lineCat[:4] == "----":
+					firstLine = 1
+					#print(lineCat)
+				#else:
+					#print(lineCat)
+					
 			
-			#print(str(closest)+" "+str(mag)+" "+str(catmag)+" "+str(zp))
+			if closest<maxDist:
+			
+				zp = catmag-mag
+				zplist.append(zp)
+				matches = matches+1
+				
+				#print(str(closest)+" "+str(mag)+" "+str(catmag)+" "+str(zp))
 		
 	lineNum=lineNum+1
 			
@@ -152,7 +153,7 @@ print("Stdev: "+str(round(stdevzp,4)))
 	
 	
 print("---------------------")
-print("Writing to file")		
+print("Writing to file: "+outfile)		
 	
 f= open(outfile,"a")	
 
