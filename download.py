@@ -38,7 +38,7 @@ return_data = response.read()
 
 #print(return_data)
 
-print("Writing to file")
+print("Writing to file: "+os.path.splitext(filename)[0]+"-UCAC4.tbl")
 
 #write the return data to file
 with open(os.path.splitext(filename)[0]+"-UCAC4.tbl", 'wb') as s:
