@@ -1,6 +1,6 @@
 # Cluster Match
 
-(Pre-requisites: Astropy, Numpy, Matplotlib)
+(Pre-requisites: Python 3.7, Astropy, Numpy, Matplotlib)
 
 
 **Step 1:**
