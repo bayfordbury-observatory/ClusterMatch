@@ -6,6 +6,7 @@
 **Step 1:**
 
 Download the UCAC4 stars covering the area around an input file:
+If you files have spaces, don't forget to enclose them in spaces.
 
 Use:
 
