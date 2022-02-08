@@ -96,6 +96,9 @@ print("Writing to file: " +outFile)
 
 f= open(outFile,"a")	
 
+#write header
+f.write("RA,Dec,Vmag,Bmag,B-V\n")
+
 lineNum=0	
 	
 for line in outlist:
