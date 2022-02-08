@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import sys
 
-arr = np.genfromtxt(sys.argv[1:][0], delimiter=',')
+arr = np.genfromtxt(sys.argv[1:][0], delimiter=',', skip_header=1)
 
 arr_T = arr.T
 
