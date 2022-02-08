@@ -22,7 +22,7 @@ For each filter (V and B), match stars in the image to the UCAC4 stars, and esti
 
 Use:
 
-  `match-zp.py <catalog file> <ACP source list> <output file> <filter>`
+  `match-zp.py <catalog file> <ACP source list> <output file name> <filter (V or B)>`
   
 e.g.
 
