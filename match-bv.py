@@ -23,10 +23,16 @@ maxDist = 2
 
 #Open the corresponding source list for reading
 VMagsFile = open(VMags, "r")
+#skip headers
+Vfirst_line = VMagsFile.readline()
 VLines = VMagsFile.readlines()
 
 BMagsFile = open(BMags, "r")
+Bfirst_line = BMagsFile.readline()
 BLines = BMagsFile.readlines()
+
+
+
 
 lineNum=0
 			
