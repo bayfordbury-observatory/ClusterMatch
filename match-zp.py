@@ -157,6 +157,9 @@ print("Writing to file: "+outfile)
 	
 f= open(outfile,"a")	
 
+#write header
+f.write("RA,Dec,"+filt+"mag\n")
+
 lineNum=0	
 	
 for line in instLines:
