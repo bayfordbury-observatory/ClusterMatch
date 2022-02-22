@@ -77,7 +77,11 @@ for Vline in VLines:
 		d2 = math.radians(decV)			
 		
 		#Calculate the distance from this source to the target
-		angSep = 3600*math.degrees(math.acos(math.sin(d1)*math.sin(d2)+math.cos(d1)*math.cos(d2)*math.cos(ra1-ra2)))
+				
+		if abs(ra1-ra2)==0 and abs(d1-d2)==0:
+			angSep = 0
+		else:		
+			angSep = 3600*math.degrees(math.acos(math.sin(d1)*math.sin(d2)+math.cos(d1)*math.cos(d2)*math.cos(ra1-ra2)))
 		
 		if angSep < maxDist and angSep<closest:
 				
