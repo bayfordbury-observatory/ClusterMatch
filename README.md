@@ -1,6 +1,6 @@
 # Cluster Match
 
-(Pre-requisites: Python 3.7, Astropy, Numpy, Matplotlib)
+(Pre-requisites: Python >=3.7, Astropy, Numpy, Matplotlib)
 
 `pip install astropy numpy matplotlib`
 
