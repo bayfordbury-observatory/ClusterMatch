@@ -2,12 +2,11 @@
 
 (Pre-requisites: Python >=3.7, Astropy, Numpy, Matplotlib)
 
-(For LRC machines you will need to specify `C:\Python39\python` in order to run python 3. By default `python` uses python 2.7).
-
 To install pre-requisities run: 
 `pip install astropy numpy matplotlib`
 
-(For LRC machines run `C:\Python39\Scripts\pip install astropy`)
+For LRC computers you will need to specify `C:\Python39\python` as the path to run python 3. By default `python` uses python 2.7.
+To install astropy run `C:\Python39\Scripts\pip install astropy`
 
 
 **Step 1:**
