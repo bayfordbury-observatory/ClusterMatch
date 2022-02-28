@@ -7,7 +7,7 @@
 To install pre-requisities run: 
 `pip install astropy numpy matplotlib`
 
-(For LRC machines run `c:\Python39\Scripts\pip install astropy`)
+(For LRC machines run `C:\Python39\Scripts\pip install astropy`)
 
 
 **Step 1:**
