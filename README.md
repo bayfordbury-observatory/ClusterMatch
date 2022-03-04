@@ -13,7 +13,7 @@ To install astropy on LRC computers run `C:\Python39\Scripts\pip install astropy
 **Step 1:**
 
 Download the UCAC4 stars covering the area around an input file:
-If you files have spaces, don't forget to enclose them in spaces.
+If your files have spaces, don't forget to enclose the entire path in double quotes.
 
 Use:
 
