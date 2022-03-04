@@ -51,7 +51,7 @@ e.g.
   
 **Step 4:**
 
-You can plot the B-V colours against apparent V magnitudes to create an HR diagram:
+You can make a basic plot of B-V colours against apparent V magnitudes to create an HR diagram:
   
 Use:
 
