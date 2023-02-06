@@ -18,7 +18,7 @@ DEC= float(hdul[0].header['CRVAL2'])
 print("DEC: "+str(DEC))
 
 
-postData = {  '-source' : 'I/322A/out', '-out.max' : '10000',  '-out.form' : '| -Separated-Values',  '-oc.form' : 'dec',  '-c.eq' : 'J2000', '-c.r' : '++2', '-c.u' : 'arcmin', '-c.geom' : 'r', '-out.src' : 'I/322A/out', '-source' : 'I/322A/out', '-out.orig' : 'standard',  '-out' : 'RAJ2000, DEJ2000, Vmag, Bmag', 'Bmag' : '>0',  'Vmag' : '>0', 'RAJ2000' : str(RA)+'+/-0.5',  'DEJ2000' : str(DEC)+'+/-0.5'}
+postData = {  '-source' : 'I/322A/out', '-out.max' : '10000',  '-out.form' : '| -Separated-Values',  '-oc.form' : 'dec',  '-c.eq' : 'J2000', '-c.r' : '++2', '-c.u' : 'arcmin', '-c.geom' : 'r', '-out.src' : 'I/322A/out', '-out.orig' : 'standard',  '-out' : 'RAJ2000, DEJ2000, Vmag, Bmag', 'Bmag' : '>0',  'Vmag' : '>0', 'RAJ2000' : str(RA)+'+/-0.5',  'DEJ2000' : str(DEC)+'+/-0.5'}
 
 #URL encode data
 
