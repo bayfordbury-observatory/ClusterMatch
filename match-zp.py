@@ -22,7 +22,7 @@ filt = sys.argv[1:][3] #"B"
 
 print("---------------------")
 
-print("Filter is "+filt);
+print("Filter is "+filt)
 
 #Maximum distance from expected coordinates for a source to be considered (arcseconds)
 maxDist = 2
