@@ -53,8 +53,9 @@ e.g.
   
 **Step 4:**
 
+The CSV file can be opened in Excel or other software to plot the results.
+
 You can make a basic plot of B-V colours against apparent V magnitudes to create an HR diagram:
-The CSV file can also be open in Excel or other software to plot the results.
   
 Use:
 
