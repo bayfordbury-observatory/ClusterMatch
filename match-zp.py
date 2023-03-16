@@ -5,13 +5,13 @@ import sys
 
 
 #read the filenames from the arguments
-catMags = sys.argv[1:][0] #"ngc 457_V_15s_B2_T3_72941-UCAC4.tbl"
+catMags = sys.argv[1:][0]
 print("Catalogue magnitudes: "+catMags)
 
-instMags=  sys.argv[1:][1] #"NGC457-B-inst-mags.csv"
+instMags=  sys.argv[1:][1]
 print("Instrument magnitudes: "+instMags)
 
-outfile=  sys.argv[1:][2] #"NGC457-B-cal-mags.csv"
+outfile=  sys.argv[1:][2]
 print("Output file for matches: "+outfile)
 
 if os.path.exists(outfile):
