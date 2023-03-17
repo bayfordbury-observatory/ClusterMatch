@@ -9,13 +9,19 @@ filename = sys.argv[1:][0]
 #Open the fits file header data unit
 hdul = fits.open(filename)
 
-#Extract Right ascension of centre of the image
-RA= float(hdul[0].header['CRVAL1'])	
-print("RA: "+str(RA))
+try:
+    #Extract Right ascension of centre of the image
+    RA= float(hdul[0].header['CRVAL1'])	
+    print("RA: "+str(RA))
 
-#Extract declination of centre of the image
-DEC= float(hdul[0].header['CRVAL2'])	
-print("DEC: "+str(DEC))
+    #Extract declination of centre of the image
+    DEC= float(hdul[0].header['CRVAL2'])	
+    print("DEC: "+str(DEC))
+    
+except:
+    print("Error: Could not find CRVAL1 or CRVAL2 in FITS header. This likely means the image has not been plate-solved.")
+    print("See https://observatory.herts.ac.uk/wiki/Plate_Solving for help with plate-solving images.")
+    quit()
 
 
 postData = {  '-source' : 'I/322A/out', '-out.max' : '10000',  '-out.form' : '| -Separated-Values',  '-oc.form' : 'dec',  '-c.eq' : 'J2000', '-c.r' : '++2', '-c.u' : 'arcmin', '-c.geom' : 'r', '-out.src' : 'I/322A/out', '-out.orig' : 'standard',  '-out' : 'RAJ2000, DEJ2000, Vmag, Bmag', 'Bmag' : '>0',  'Vmag' : '>0', 'RAJ2000' : str(RA)+'+/-0.5',  'DEJ2000' : str(DEC)+'+/-0.5'}
