@@ -9,6 +9,8 @@ For LRC computers you will need to specify `C:\Python39\python` instead of just 
 
 To install astropy on LRC computers run `C:\Python39\Scripts\pip install astropy`
 
+If using Spyder you can add parameters by clicking Run>Configuration per file, then entering the parameters (not including the script name itself) into the "Command line options" box.
+
 Images will need to be plate-solved for these scripts (and APT) to run successfully.
 
 
