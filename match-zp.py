@@ -179,5 +179,7 @@ for line in instLines:
 		f.write(ra+","+dec+","+"{:.4f}".format(calmag)+"\n")
 		
 	lineNum=lineNum+1
-	
+
+f.close()
+
 print("Done")	
