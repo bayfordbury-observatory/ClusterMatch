@@ -114,5 +114,7 @@ lineNum=0
 for line in outlist:
 
 	f.write(line+"\n")
+
+f.close()
 		
 print("Done")
