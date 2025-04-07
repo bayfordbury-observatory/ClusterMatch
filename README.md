@@ -13,6 +13,7 @@ If using Spyder you can add parameters by clicking Run>Configuration per file, t
 
 Images will need to be plate-solved for these scripts (and APT) to run successfully.
 
+You can download it from the [releases page.](https://github.com/bayfordbury-observatory/ClusterMatch/releases) Please send us any feedback or suggestions!
 
 **Step 1:**
 
