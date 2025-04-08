@@ -5,15 +5,15 @@
 To install pre-requisities run: 
 `pip install astropy numpy matplotlib`
 
-For LRC computers you will need to specify `C:\Python39\python` instead of just `python` as the path to run python 3 (by default `python` uses python 2.7).
-
-To install astropy on LRC computers run `C:\Python39\Scripts\pip install astropy`
+To install astropy on LRC computers run `C:\Python312\Scripts\pip install astropy` or `C:\Program Files\Python312\Scripts\pip install astropy`.
 
 If using Spyder you can add parameters by clicking Run>Configuration per file, then entering the parameters (not including the script name itself) into the "Command line options" box in the "General Settings" section (be careful NOT to use the "Command line options" box in the "Console" section higher up).
 
-Images will need to be plate-solved for these scripts (and APT) to run successfully.
+Images will need to be plate-solved for these scripts (and APT) to run successfully. 
 
-You can download it from the [releases page.](https://github.com/bayfordbury-observatory/ClusterMatch/releases) Please send us any feedback or suggestions!
+On the LRC computers, APT can be found at `C:\tools\APT_v3.0.8\APT_v3.0.8\APT.jar`.
+
+You can download ClusterMatch from the [releases page.](https://github.com/bayfordbury-observatory/ClusterMatch/releases) Please send us any feedback or suggestions!
 
 **Step 1:**
 
